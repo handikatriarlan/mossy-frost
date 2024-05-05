@@ -189,21 +189,35 @@ main {
 }
 
 .menu-item {
+    margin-top: 5px;
     border: 1px solid #ccc;
-    margin: 0 20px;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
 }
 
 .menu-item img {
     width: 100%;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover img {
+    transform: scale(0.97);
 }
 
 .menu-item h2 {
     margin-top: 10px;
     font-size: 20px;
+    color: #333;
 }
 
 .menu-item p {
@@ -212,11 +226,17 @@ main {
     color: #666;
 }
 
+.menu-item sup {
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
 .menu-item span {
     display: block;
     margin-top: 10px;
     font-weight: bold;
     color: #333;
+    font-size: 18px;
 }
 
 .title {
