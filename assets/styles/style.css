@@ -49,7 +49,6 @@ nav ul {
     text-align: right;
     margin-right: 20px;
     display: flex;
-    /* Gunakan flexbox untuk susunan menu */
     flex-direction: row;
 }
 
@@ -250,6 +249,7 @@ main {
 }
 
 .input,
+.select,
 .textarea {
     width: 100%;
     padding: 10px;
@@ -263,29 +263,29 @@ main {
     resize: none;
 }
 
+.select {
+    appearance: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 .checkbox-wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.checkbox-custom::before {
-    font-size: 14px;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.checkbox-input,
+.checkbox-label {
+    cursor: pointer;
 }
 
 .checkbox-label {
     margin-left: 10px;
-    cursor: pointer;
 }
 
-.checkbox-input:checked+.checkbox-custom+.checkbox-label {
+.checkbox-input:checked+.checkbox-label {
     text-decoration: underline;
 }
 
